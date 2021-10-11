@@ -7,6 +7,9 @@ params:
   optimizer: SGD
   validation_datasize: 5000
 
+tensorboard:
+  is_tensorboard_logging_enable: True
+  logs_dir: logs/fit
 
 artifacts:
   artifacts_dir: artifacts

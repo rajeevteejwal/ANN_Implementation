@@ -1,8 +1,10 @@
 from src.training import training
 import argparse
 
+
 def main(config_path):
     training(config_path)
+
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()

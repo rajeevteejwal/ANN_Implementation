@@ -11,6 +11,7 @@ log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(filename=os.path.join(log_dir,"runtime_logging.log"), level=logging.INFO, format=logging_str, filemode='a')
 
+
 def main(layers,batchSize,loss_function,metrics,optimizer):
     BATCH_SIZE = batchSize
     LOSS_FUNCTION = loss_function
@@ -28,8 +29,8 @@ def main(layers,batchSize,loss_function,metrics,optimizer):
     print(f"y_train_full shape: \n{y_train_full.shape}")
     print(f"X_test shape: \n{X_test.shape}")
     print(f"y_test shape: \n{y_test.shape}")
-    X_valid = X_train_full[:5000] /255.
-    X_train = X_train_full[5000:] /255.
+    X_valid = X_train_full[:5000] / 255.
+    X_train = X_train_full[5000:] / 255.
     y_valid = y_train_full[:5000]
     y_train = y_train_full[5000:]
     logging.info(f"X_valid shape: \n{X_valid.shape}")
